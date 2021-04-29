@@ -1,0 +1,121 @@
+@import url(https://fonts.google.com/specimen/Lexend+Deca);
+@import url(https://fonts.google.com/specimen/Big+Shoulders+Display);
+
+:root {
+    --white: white;
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%);
+    --LexendDeca: 'Lexend Deca';
+    --BigShouldersDisplay:'Big Shoulders Display';
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body  {
+    height: 100vh;
+    max-width: 1440px;
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--Verylightgray);
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    margin: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;   
+}
+
+  .header {
+    font-family: var(--BigShouldersDisplay), sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--white);
+  }
+  
+  .description {
+    color: var(--Transparentwhite);
+    line-height: 25px;
+    font-size: 15px;
+  }
+  
+  main {
+    width: 800px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .card-element {
+    padding: 60px;
+  }
+  
+  .sedans-card {
+    background-color: var(--Brightorange);
+  }
+  
+  .suvs-card {
+    background-color: var( --Darkcyan);
+  }
+  
+  .luxury-card {
+    background-color: var(--Verydarkcyan);
+  }
+  
+  .learn-more {
+    margin-top: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: white;
+    font-family: var(--LexendDeca), sans-serif;
+    padding: 16px 32px;
+    border: solid 2px transparent;
+    outline: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .sedans-card .learn-more {
+    color: var(--Brightorange);
+  }
+  
+  .suvs-card .learn-more {
+    color: var(--Darkcyan);
+  }
+  
+  .luxury-card .learn-more {
+    color: var(--Verydarkcyan);
+  }
+  
+  
+  @media (max-width: 600px) {
+    body {
+      height: auto;
+      padding: 50px 0;
+    }
+
+    main {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 70vw;
+    }
+  }
+
